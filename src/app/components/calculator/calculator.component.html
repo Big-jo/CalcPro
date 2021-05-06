@@ -1,0 +1,165 @@
+<!-- Body -->
+<div class="calc-card border border-blue-400 bg-blue-600">
+  <div class="container p-5">
+    <div class="display rounded">
+      <div class="main-display rounded-sm bg-gray-200 h-16">
+        <div class="border border-b-2 p-1 bg-gray-200 h-7">
+          <!-- {{subText}} -->
+          <h6>{{ subText }}</h6>
+        </div>
+        <!-- {{mainText}} -->
+        <div class="p-1">
+          <h6>{{ mainText }}</h6>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        class="memBtns grid grid-cols-4 gap-x-4 gap-y-4 mt-5 font-bold text-sm"
+      >
+        <button
+          class="button bg-blue-400 rounded py-1 px-4 p-0"
+          (click)="allClear()"
+        >
+          <h6>MC</h6>
+        </button>
+        <button
+          class="button bg-blue-400 rounded py-1 px-4"
+          (click)="MemoryAdd()"
+        >
+          <h6>M+</h6>
+        </button>
+        <button
+          class="button bg-blue-400 rounded py-1 px-4"
+          (click)="MemorySubtract()"
+        >
+          <h6>M-</h6>
+        </button>
+        <button
+          class="button bg-blue-400 rounded py-1 px-4"
+          (click)="MemoryRecall()"
+        >
+          <h6>MR</h6>
+        </button>
+      </div>
+    </div>
+    <div class="flex flex-row">
+      <!-- Numpad column -->
+      <div>
+        <div class="numpad grid grid-cols-4 gap-x-4 gap-y-4 mt-5 font-bold">
+          <button
+            class="button bg-blue-200 rounded py-1 px-4"
+            (click)="pressKey('1')"
+          >
+            1
+          </button>
+          <button
+            class="button bg-blue-200 rounded py-1 px-4"
+            (click)="pressKey('2')"
+          >
+            2
+          </button>
+          <button
+            class="button bg-blue-200 rounded py-1 px-4"
+            (click)="pressKey('3')"
+          >
+            3
+          </button>
+          <button
+            class="button bg-blue-200 rounded py-1 px-4"
+            (click)="pressKey('+')"
+          >
+            +
+          </button>
+          <button
+            class="button bg-blue-200 rounded py-1 px-4"
+            (click)="pressKey('4')"
+          >
+            4
+          </button>
+          <button
+            class="button bg-blue-200 rounded py-1 px-4"
+            (click)="pressKey('5')"
+          >
+            5
+          </button>
+          <button
+            class="button bg-blue-200 rounded py-1 px-4"
+            (click)="pressKey('6')"
+          >
+            6
+          </button>
+          <button
+            class="button bg-blue-200 rounded py-1 px-4"
+            (click)="pressKey('-')"
+          >
+            -
+          </button>
+          <button
+            class="button bg-blue-200 rounded py-1 px-4"
+            (click)="pressKey('7')"
+          >
+            7
+          </button>
+          <button
+            class="button bg-blue-200 rounded py-1 px-4"
+            (click)="pressKey('8')"
+          >
+            8
+          </button>
+          <button
+            class="button bg-blue-200 rounded py-1 px-4"
+            (click)="pressKey('9')"
+          >
+            9
+          </button>
+          <button
+            class="button bg-blue-200 rounded py-1 px-4"
+            (click)="pressKey('/')"
+          >
+            /
+          </button>
+          <button
+            class="button bg-blue-200 rounded py-1 px-4"
+            (click)="pressKey('0')"
+          >
+            0
+          </button>
+          <button
+            class="button bg-blue-200 rounded py-1"
+            (click)="pressKey('00')"
+          >
+            00
+          </button>
+          <button
+            class="button bg-blue-200 rounded py-1"
+            (click)="pressKey('000')"
+          >
+            000
+          </button>
+          <button
+            class="button bg-blue-200 rounded py-1 px-4"
+            (click)="pressKey('x')"
+          >
+            x
+          </button>
+        </div>
+
+        <button
+          class="button w-full bg-blue-400 rounded py-1 px-4 pt-1 mt-5 text-center"
+          (click)="calculate()"
+        >
+          Enter
+        </button>
+      </div>
+      <div>
+        <button
+          class="button bg-blue-200 rounded py-1 px-4 ml-2 mt-5 "
+          style="height: 92%"
+        >
+          Power
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

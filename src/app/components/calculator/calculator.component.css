@@ -1,0 +1,30 @@
+.main-display {
+  background: lightgrey;
+  /* height: calc(100% / 3); */
+  /* padding: 5% !important; */
+  /* font-size: 4rem; */
+  text-align: right;
+  font-family: Courier, monospace;
+  overflow: auto;
+}
+
+.subdisplay {
+  /* border-bottom: 1px solid ;
+  /* height: 25%; */
+  /* font-size: 2rem; */
+  /* overflow: auto; */
+}
+
+button {
+  outline: none;
+  @apply focus:ring-4;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
