@@ -21,7 +21,7 @@ export class AppComponent {
           name: 'Non Scientific',
         },
         {
-          id: 'food-prices',
+          id: 'food',
           name: 'Food Prices',
         },
         {
