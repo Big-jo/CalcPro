@@ -1,3 +1,34 @@
 <div class="calc-card">
-    
+  <div class="wrapper p-2 border border-b-2 mb-3">
+    <input
+      class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+      type="search"
+      name="search"
+      placeholder="Search for food"
+      [(ngModel)]="searchTerm"
+    />
+    <button
+      type="submit"
+      class="button bg-blue-500 px-2 py-1 mt-2 text-gray-200 rounded focus:ring hover:bg-blue-700"
+      (click)="Search(searchTerm)"
+    >
+      Search
+    </button>
+  </div>
+  <div class="grid md:grid-cols-2">
+    <div *ngFor="let product of products">
+      <div class="mt-4 border border-b-2">
+        <div class="md:p-1 p-2 bg-white">
+          <!--Banner image-->
+          <img class="rounded-lg w-full" [src]="product.image" />
+
+          <!--Tag-->
+          <p class="text-indigo-500 font-semibold text-base mt-2">
+            {{ product.title }}
+          </p>
+        </div>
+        <!--End of first card-->
+      </div>
+    </div>
+  </div>
 </div>
