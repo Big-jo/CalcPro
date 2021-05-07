@@ -8,7 +8,8 @@ import { AppComponent } from './app.component';
 import { CalculatorComponent } from './components/calculator/calculator.component';
 import { WorkspaceComponent } from './components/workspace/workspace.component';
 import { FoodComponent } from './components/food/food.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +26,8 @@ import { FoodComponent } from './components/food/food.component';
       { path: 'food', component: FoodComponent },
       { path: 'non-scientific', component: CalculatorComponent },
     ]),
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

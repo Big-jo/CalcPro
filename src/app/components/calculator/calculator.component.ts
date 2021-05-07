@@ -5,8 +5,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./calculator.component.css'],
 })
 export class CalculatorComponent implements OnInit {
-  subText = '0';
-  mainText = '0';
+  subText;
+  mainText;
   operand1: number;
   operand2: number;
   operator = '';
@@ -16,6 +16,8 @@ export class CalculatorComponent implements OnInit {
   answered = false; // Check if solution has been processed
 
   operatorSet = false;
+
+  powerState = false;
 
   constructor() {}
 
@@ -123,5 +125,17 @@ export class CalculatorComponent implements OnInit {
     const operand = parseFloat(this.mainText);
     this.mainText = (memory - operand).toString();
     this.memory.push(this.mainText);
+  }
+
+  PowerButton() {
+    if (this.powerState === false) {
+      this.mainText = '0';
+      this.subText = 'Welcome To Calc-Pro';
+      this.powerState = true;
+    } else {
+      this.mainText = '';
+      this.subText = '';
+      this.powerState = false;
+    }
   }
 }

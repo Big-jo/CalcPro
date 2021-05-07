@@ -4,7 +4,7 @@
   /* padding: 5% !important; */
   /* font-size: 4rem; */
   text-align: right;
-  font-family: Courier, monospace;
+  font-family: digital-calculator;
   overflow: auto;
 }
 
@@ -27,4 +27,9 @@ button {
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
+}
+
+@font-face {
+  font-family: digital-calculator;
+  src: url("/assets/digital-7.regular.ttf") format("truetype");
 }
